@@ -22,6 +22,8 @@ jobs:
           deno-version: v2.x
       - name: Verificar segredos e bootstrap
         run: node scripts/test-no-secrets.mjs
+      - name: Verificar callback OAuth básico
+        run: node scripts/test-oauth-callback-basic.mjs
       - name: Compilar Edge Functions quando existirem
         shell: bash
         run: |
