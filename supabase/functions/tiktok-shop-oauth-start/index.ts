@@ -59,8 +59,12 @@ Deno.serve(async (req: Request) => {
   authorizeUrl.searchParams.set("service_id", serviceId);
   authorizeUrl.searchParams.set("state", state);
 
-  const response = Response.redirect(authorizeUrl.toString(), 302);
-  response.headers.set("cache-control", "no-store");
-  response.headers.set("x-itufarna-state-ttl", String(STATE_TTL_SECONDS));
-  return response;
+  return new Response(null, {
+    status: 302,
+    headers: {
+      location: authorizeUrl.toString(),
+      "cache-control": "no-store",
+      "x-itufarna-state-ttl": String(STATE_TTL_SECONDS),
+    },
+  });
 });
