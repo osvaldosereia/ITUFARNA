@@ -24,6 +24,8 @@ jobs:
         run: node scripts/test-no-secrets.mjs
       - name: Verificar callback OAuth básico
         run: node scripts/test-oauth-callback-basic.mjs
+      - name: Verificar contrato OAuth V1
+        run: node scripts/test-oauth-v1.mjs
       - name: Compilar Edge Functions quando existirem
         shell: bash
         run: |
