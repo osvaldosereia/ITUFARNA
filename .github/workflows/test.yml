@@ -26,6 +26,8 @@ jobs:
         run: node scripts/test-oauth-callback-basic.mjs
       - name: Verificar contrato OAuth V1
         run: node scripts/test-oauth-v1.mjs
+      - name: Verificar redirect OAuth
+        run: node scripts/test-oauth-start-redirect.mjs
       - name: Compilar Edge Functions quando existirem
         shell: bash
         run: |
