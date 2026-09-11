@@ -1,0 +1,7 @@
+project_id = "ssbesxgaijknwsjbsbcz"
+
+[functions.tiktok-shop-oauth-callback]
+verify_jwt = false
+
+[functions.tiktok-shop-oauth-start]
+verify_jwt = false
